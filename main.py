@@ -1,5 +1,6 @@
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
+# from selenium.webdriver.chrome.service import Service
+# from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
@@ -13,8 +14,8 @@ password = "Solutions@999"
 
 url = "https://eintel.xpient.com/ffco/webcore/"
 
-service = Service(executable_path=r"C:\Users\Acer\Documents\selenium\chromedriver.exe")
-driver = webdriver.Chrome(service=service)
+# service = Service(executable_path=r"E:\Projects\Automation_project\automation_project_selenium\geckodriver.exe")
+driver = webdriver.Firefox()
 driver.get(url)
 driver.find_element(By.ID, "dnn_ctr362_Login_Login_DNN_txtUsername").send_keys(username)
 driver.find_element(By.ID, "dnn_ctr362_Login_Login_DNN_txtPassword").send_keys(password)
